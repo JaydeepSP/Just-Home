@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/font.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>JustHome</title>
+</head>
+
+<body>
+  <div id="scroll-top" class="hidden fixed bottom-2.5 right-2.5 z-25">
+    <button id="scroll-btn" class="size-[50px] rounded-full bg-[#222121] text-white cursor-pointer">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+  <header class="py-4 absolute w-full">
+    <div class="max-w-[115rem] w-full mx-auto px-4">
+      <nav class="flex justify-between items-center bg-white px-5 py-2.5 lg:px-10 lg:py-5 rounded-full">
+
+        <a href="#">
+          <img src="./images/logo.svg.svg" alt="Logo" />
+        </a>
+
+        <ul class="flex items-center gap-[38px] max-xl:gap-5 max-lg:hidden xl:ml-[160px]">
+          <li>
+            <a href="#" class="font-medium">Home</a>
+          </li>
+          <li>
+            <a href="#listing" class="font-medium">Listings</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Members</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Pages</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Contact</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <ul class="flex items-center gap-5 max-xl:gap-4 max-sm:hidden ">
+            <li>
+              <a href="tel:+6868588666" class="font-medium">
+                <i class="fa-solid fa-phone mr-1.5 max-xl:mr-0"></i>
+                <span class="max-xl:hidden">+68 685 88666</span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="flex justify-center items-center font-medium block size-10 rounded-full border hover:bg-black hover:text-white trasition-all duration-500 ease-in-out">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="font-medium">
+                <button
+                  class="py-1.5 px-[26px] border rounded-full hover:bg-black hover:text-white trasition-all duration-500 ease-in-out cursor-pointer">
+                  Add Property
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:hidden">
+          <input type="checkbox" id="sidebar-active" class="hidden">
+          <div class="text-2xl">
+            <label for="sidebar-active">
+              <div class="menu-bar-container menu-bar">
+                <div class="bar1 w-[35px] h-[5px] bg-[#333] my-1.5 trasition-all duration-500"></div>
+                <div class="bar2 w-[35px] h-[5px] bg-[#333] my-1.5 trasition-all duration-500"></div>
+                <div class="bar3 w-[35px] h-[5px] bg-[#333] my-1.5 trasition-all duration-500"></div>
+              </div>
+            </label>
+          </div>
+          <label class="overlay" for="sidebar-active"></label>
+          <div class="sidebar">
+            <ul class="mt-8 pl-5">
+              <li class="mb-5">
+                <a href="#" class="font-medium">Home</a>
+              </li>
+              <li class="mb-5">
+                <a href="#listing" class="font-medium">Listings<a>
+              </li>
+              <li class="mb-5">
+                <a href="#team" class="font-medium">Members</a>
+              </li>
+              <li class="mb-5">
+                <a href="#" class="font-medium">Blog</a>
+              </li>
+              <li class="mb-5">
+                <a href="#" class="font-medium">Pages</a>
+              </li>
+              <li class="mb-5">
+                <a href="#" class="font-medium">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pt-[116px] bg-[url('./images/hero-bg.jpg')] bg-cover bg-center bg-no-reapet">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="pt-5 pb-5 lg:pt-[178px] lg:pb-[125px]">
+        <div class="text-center">
+          <button
+            class="uppercase text-[#1F4B43] font-medium text-xs py-4 px-[26px] rounded-full border cursor-pointer">
+            LET US GUIDE YOUR HOME
+          </button>
+          <h1 class="text-[#1F4B43] max-lg:text-3xl lg:text-6xl font-medium my-5">
+            Believe in finding it
+          </h1>
+          <p class="!text-[#1F4B43] font-medium">
+            Search properties for sale and to rent in the UK
+          </p>
+        </div>
+
+        <form
+          class="bg-white mx-auto mt-6 lg:mt-[50px] py-1.5 px-2.5 rounded-full  lg:max-w-[43.125rem] w-full max-lg:w-1/2 flex items-center justify-between">
+          <input
+            class="px-1.5 py-2.5 lg:px-5 lg:py-[18px] rounded-full placeholder-[#1A1A1A] text-sm lg:text-lg w-full max-lg:w-[70%] lg:max-w-[38.4375rem] "
+            type="text" name="search" id="search" placeholder="Enter Name, Keywords..." />
+
+          <button class="size-10 lg:size-[56px] rounded-full bg-[#E7C873] cursor-pointer text-sm lg:text-lg ">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="mt-4 md:mt-5 lg:mt-[44px]">
+          <h2 class="font-medium !text-white text-center">
+            What are you looking for?
+          </h2>
+          <div class="flex max-md:flex-col justify-center items-center gap-2.5 mt-6">
+            <button class="text-white text-sm border rounded-full p-1 backdrop-blur-sm">
+              <img class="inline mr-2.5" src="./images/villa.svg" alt="Modern Villa" />
+              <span class="mr-5">Modern Villa</span>
+            </button>
+            <button class="text-white text-sm border rounded-full p-1 backdrop-blur-sm">
+              <img class="inline mr-2.5" src="./images/apartment.svg" alt="Apartment" />
+              <span class="mr-5">Apartment</span>
+            </button>
+            <button class="text-white text-sm border rounded-full p-1 backdrop-blur-sm">
+              <img class="inline mr-2.5" src="./images/town.svg" alt="Town House" />
+              <span class="mr-5">Town House</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-10 md:pt-[60px] lg:pt-[165px] pb-10 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium">
+          Why You Should Work With Us
+        </h2>
+        <p class="text-sm lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-[60px] mt-5 lg:mt-10">
+        <div class="text-center p-4 max-md:p-0">
+          <img class="mx-auto max-md:size-10" src="./images/Icon.svg" alt="Image" />
+          <h4 class="mt-2.5 mb-2.5 md:mt-[28px] md:mb-3.5 font-medium text-lg md:text-xl">
+            Wide Range of Properties
+          </h4>
+          <p class="leading-[28.5px] max-md:text-sm">
+            We offer expert legal help for all related property items in
+            Dubai.
+          </p>
+        </div>
+        <div class="text-center p-4 max-md:p-0">
+          <img class="mx-auto  max-md:size-10" src="./images/Icon (1).svg" alt="Image" />
+          <h4 class="mt-2.5 mb-2.5 md:mt-[28px] md:mb-3.5 font-medium text-lg md:text-xl">
+            Buy or Rent Homes
+          </h4>
+          <p class="leading-[28.5px] max-md:text-sm">
+            We sell your home at the best market price and very quickly as
+            well.
+          </p>
+        </div>
+        <div class="text-center p-4 max-md:p-0">
+          <img class="mx-auto max-md:size-10" src="./images/Icon (2).svg" alt="Image" />
+          <h4 class="mt-2.5 mb-2.5 md:mt-[28px] md:mb-3.5 font-medium text-lg md:text-xl">
+            Trusted by Thousands
+          </h4>
+          <p class="leading-[28.5px] max-md:text-sm">
+            We offer you free consultancy to get a loan for your new home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="listing" class="pb-10 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium">
+          Featured Properties
+        </h2>
+        <p class="text-sm lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="mt-5 lg:mt-10">
+        <div class="flex justify-center items-center md:gap-5 max-md:overflow-x-auto flex-nowrap">
+          <button
+            class="border border-black bg-[#FFF8F6] font-medium rounded-full py-1.5 px-5 hover:bg-[#FFF8F6] hover:border-black cursor-pointer trasition-all duration-500 ease-in-out">
+            All Properties
+          </button>
+          <button
+            class="border border-transparent font-medium rounded-full py-1.5 px-5 hover:bg-[#FFF8F6] hover:border-black cursor-pointer trasition-all duration-500 ease-in-out">
+            For Sale
+          </button>
+          <button
+            class="border border-transparent font-medium rounded-full py-1.5 px-5 hover:bg-[#FFF8F6] hover:border-black cursor-pointer trasition-all duration-500 ease-in-out">
+            For Rent
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-5 lg:mt-10">
+          <div class="rounded-xl bg-[url('./images/featured1.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Sale
+              </button>
+              <button class="rounded-full bg-[#E7C873] font-medium uppercase text-black text-sm py-2 px-4 ml-2.5">
+                Featured
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px]">
+              <h4 class="font-medium lg:text-xl">Luxury Family Home</h4>
+              <span class="my-2 block max-lg:text-sm">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                1800-1818 79th St
+              </span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$395,000</span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">1</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>400</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-xl bg-[url('./images/featured2.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Sale
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px]">
+              <h4 class="font-medium lg:text-xl">Skyper Pool Apartment</h4>
+              <span class="my-2 block max-lg:text-sm">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                1020 Bloomingdale Ave
+              </span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$280,000</span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">2</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>450</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[url('./images/featured3.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Rent
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px]">
+              <h4 class="font-medium lg:text-xl">North Dillard Street</h4>
+              <span class="my-2 block max-lg:text-sm">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                4330 Bell Shoals Rd</span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$250<span
+                    class="font-normal text-sm">/month</span>
+                </span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">2</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>400</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[url('./images/featured4.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Sale
+              </button>
+              <button class="rounded-full bg-[#E7C873] font-medium uppercase text-black text-sm py-2 px-4 ml-2.5">
+                Featured
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px]">
+              <h4 class="font-medium lg:text-xl">Eaton Garth Penthouse</h4>
+              <span class="my-2 block max-lg:text-sm">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                7722 18th Ave, Brooklyn
+              </span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$180,000</span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">2</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>450</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[url('./images/featured5.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Rent
+              </button>
+              <button class="rounded-full bg-[#E7C873] font-medium uppercase text-black text-sm py-2 px-4 ml-2.5">
+                Featured
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px] ">
+              <h4 class="font-medium lg:text-xl">New Apartment Nice View</h4>
+              <span class="my-2 block max-lg:text-sm">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                42 Avenue O, Brooklyn
+              </span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$850<span
+                    class="text-sm font-normal">/month</span>
+                </span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">1</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>460</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[url('./images/featured6.svg')] bg-cover bg-no-reapet p-5">
+            <div>
+              <button class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4">
+                For Sale
+              </button>
+              <button class="rounded-full bg-[#E7C873] font-medium uppercase text-black text-sm py-2 px-4 ml-2.5">
+                Featured
+              </button>
+            </div>
+            <div class="bg-white p-5 rounded-lg mt-[232px]">
+              <h4 class="font-medium lg:text-xl">Diamond Manor Apartment</h4>
+              <span class="my-2 block max-lg:text-sm ">
+                <img class="inline-block" src="./images/location.svg" alt="Location" />
+                7802 20th Ave, Brooklyn
+              </span>
+              <div
+                class="flex justify-between items-center gap-10 max-[1100px]:gap-2 max-[1100px]:flex-col max-[1100px]:items-start">
+                <span class="lg:text-xl font-semibold text-[#EB664E]">$259,000</span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon1.svg"
+                      alt="freatured-icon1" />
+                    <span class="ml-2.5">4</span>
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-[#E9E9E9]">
+                    <img class="inline-block  size-[20px] object-cover" src="./images/freatured-icon2.svg"
+                      alt="freatured-icon2" />
+                    <span class="ml-2.5">2</span>
+                  </span>
+                  <span>
+                    <img class="inline-block mr-2.5 size-[20px] object-cover" src="./images/freatured-icon3.svg"
+                      alt="freatured-icon3" />
+                    <span>500</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-[50px]">
+          <button
+            class="py-2.5 px-3.5 lg:py-5 lg:px-[30px] max-lg:text-sm bg-[#E7C873] border border-transparent rounded-full font-medium cursor-pointer hover:bg-transparent hover:border-[#E7C873] trasition-all duration-500 ease-in-out">
+            See All Listing
+            <i class="fa-solid fa-arrow-right ml-2.5 lg:text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F7F7F7] pt-10 md:pt-[60px] lg:pt-[165px]  pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[115rem] w-full mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium">
+          Find Properties in These Cities
+        </h2>
+        <p class="text-sm lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="mt-6">
+        <div class="slider">
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h1.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Chicago</h4>
+                <p class="!text-white">2 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h2.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Los Angeles</h4>
+                <p class="!text-white">1 Property</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h3.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Miami</h4>
+                <p class="!text-white">2 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h4.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Florida</h4>
+                <p class="!text-white">3 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h5.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">New York</h4>
+                <p class="!text-white">8 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h1.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Chicago</h4>
+                <p class="!text-white">2 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h2.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[474px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Los Angeles</h4>
+                <p class="!text-white">1 Property</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h3.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[475px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Miami</h4>
+                <p class="!text-white">2 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h4.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[475px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">Florida</h4>
+                <p class="!text-white">3 Properties</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="mx-auto bg-[url('./images/h5.svg')] bg-cover bg-no-reapet bg-center w-[336px] h-[475px] rounded-2xl p-10 relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#1a1a1acc_0%,#1a1a1a1a_60%,#00000000_100%)] before:z-10 before:size-full  before:rounded-2xl before:top-0 before:left-0 max-md:w-[200px] max-md:h-[350px]">
+              <div class="relative z-11">
+                <h4 class="font-medium text-lg !text-white">New York</h4>
+                <p class="!text-white">8 Properties</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-10 md:pt-[60px] lg:pt-[165px] pb-10 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="flex justify-between max-lg:flex-col max-lg:gap-5 gap-[90px]">
+        <div>
+          <img class="max-lg:mx-auto max-lg:w-1/2" src="./images/work-bg.jpg" alt="work-bg" />
+        </div>
+        <div class="max-md:text-center">
+          <h2 class="font-medium text-2xl lg:text-[40px]">
+            How It works? Find a perfect home
+          </h2>
+          <p class="mt-2.5 lg:mt-5 mb-3.5 lg:mb-[30px]">
+            Pellentesque egestas elementum egestas faucibus sem. Velit nunc
+            egestas ut morbi. Leo diam diam.
+          </p>
+          <div>
+            <div class="flex max-md:justify-center max-md:items-center max-md:flex-col gap-5 mt-3.5 lg:mt-[30px]">
+              <div
+                class="relative before:content-[''] before:absolute before:size-[30px] before:rounded-full before:bg-[#E7C873] before:bottom-[-30%] before:left-[-25%] before:z-10 size-[34px] ">
+                <img class="size-[34px] relative z-11" src="./images/work1.svg" alt="Image" />
+              </div>
+              <div class="max-md:text-center">
+                <h4 class="font-medium text-lg lg:text-xl mb-2.5">
+                  Find Real Estate
+                </h4>
+                <p class="max-lg:text-sm max-w-[288px]">
+                  Sumo petentium ut per, at his wisim utinam adipiscing. Est
+                  ei graeco
+                </p>
+              </div>
+            </div>
+            <div class="flex max-md:justify-center max-md:items-center max-md:flex-col gap-5 mt-3.5 lg:mt-[30px]">
+              <div
+                class="relative before:content-[''] before:absolute before:size-[30px] before:rounded-full before:bg-[#E7C873] before:bottom-[-30%] before:left-[-25%] before:z-10 size-[34px]">
+                <img class="size-[34px] relative z-11" src="./images/work2.svg" alt="Image" />
+              </div>
+              <div>
+                <h4 class="font-medium text-lg lg:text-xl mb-2.5">
+                  Meet Realtor
+                </h4>
+                <p class="max-lg:text-sm max-w-[288px]">
+                  Sumo petentium ut per, at his wisim utinam adipiscing. Est
+                  ei graeco
+                </p>
+              </div>
+            </div>
+            <div class="flex max-md:justify-center max-md:items-center max-md:flex-col gap-5 mt-3.5 lg:mt-[30px]">
+              <div
+                class="relative before:content-[''] before:absolute before:size-[30px] before:rounded-full before:bg-[#E7C873] before:bottom-[-30%] before:left-[-25%] before:z-10 size-[34px]">
+                <img class="size-[34px] relative z-11" src="./images/work3.svg" alt="Image" />
+              </div>
+              <div>
+                <h4 class="font-medium text-lg lg:text-xl mb-2.5">
+                  Take The Keys
+                </h4>
+                <p class="max-lg:text-sm max-w-[288px]">
+                  Sumo petentium ut per, at his wisim utinam adipiscing. Est
+                  ei graeco
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#FFF8F6] pt-10 md:pt-[60px] lg:pt-[165px] pb-10 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="flex justify-between max-lg:flex-col max-lg:gap-5 max-lg:items-center">
+        <div class="max-w-[450px] w-full">
+          <div class="text-start max-lg:text-center">
+            <h2 class="text-2xl lg:text-[40px] font-medium">
+              What our customers are saying us?
+            </h2>
+            <p class="my-2.5 lg:my-5">
+              Various versions have evolved over the years, sometimes by
+              accident, sometimes on purpose injected humour and the like.
+            </p>
+          </div>
+          <div class="flex gap-5 lg:gap-[68px] max-lg:items-center max-lg:justify-center">
+            <div>
+              <span class="font-medium text-lg lg:text-[26px] block">10m+</span>
+              <span>Happy people</span>
+            </div>
+            <div>
+              <span class="font-medium text-lg lg:text-[26px] block">4.88</span>
+              <span>Overall rating</span>
+              <div class="flex gap-1 lg:mt-2">
+                <img src="./images/Vector.svg" alt="Star" />
+                <img src="./images/Vector.svg" alt="Star" />
+                <img src="./images/Vector.svg" alt="Star" />
+                <img src="./images/Vector.svg" alt="Star" />
+                <img src="./images/Vector.svg" alt="Star" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-[60px]">
+          <div class="testimonial-slider max-w-[650px] w-full max-md:max-w-xs max-sm:max-w-[240px]">
+            <div>
+              <div class="py-2.5 px-3.5">
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-5">
+                    <img class="size-[90px]" src="./images/person.png" alt="Profile" />
+                    <div>
+                      <h4 class="font-medium text-lg">Cameron Williamson</h4>
+                      <span>Designer</span>
+                    </div>
+                  </div>
+                  <div class="max-sm:hidden block">
+                    <img class=" object-cover" src="./images/quote.svg" alt="Quote" />
+                  </div>
+                </div>
+                <p class="font-medium text-lg max-w-[546px] w-full mt-[30px]">
+                  Searches for multiplexes, property comparisons, and the loan
+                  estimator. Works great. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor1
+                  incididunt ut labore et dores.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="py-2.5 px-3.5">
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-5">
+                    <img class="size-[90px]" src="./images/person.png" alt="Profile" />
+                    <div>
+                      <h4 class="font-medium text-lg">Cameron Williamson</h4>
+                      <span>Designer</span>
+                    </div>
+                  </div>
+                  <div class="max-sm:hidden block">
+                    <img class="object-cover" src="./images/quote.svg" alt="Quote" />
+                  </div>
+                </div>
+                <p class="font-medium text-lg max-w-[546px] w-full mt-[30px]">
+                  Searches for multiplexes, property comparisons, and the loan
+                  estimator. Works great. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-[#FFF8F6] pt-10 md:pt-[60px] lg:pt-[75px] pb-10 md:pb-[60px] lg:pb-[155px] border-t border-t-[#EBEBEB]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <h6 class="text-center">
+        Thousands of world's leading companies trust Space
+      </h6>
+      <div class="mt-[30px] flex justify-between items-center max-md:overflow-x-auto">
+        <img class="mr-4" src="./images/amazon.png" alt="amazon" />
+        <img class="mr-4" src="./images/amd.png" alt="amd" />
+        <img class="mr-4" src="./images/cisco.png" alt="cisco" />
+        <img class="mr-4" src="./images/dropcam.png" alt="dropcam" />
+        <img class="mr-4" src="./images/logitech.png" alt="logitech" />
+        <img class="mr-4" src="./images/spotify.png" alt="spotify" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#1A1A1A] pt-5 md:pt-[60px] lg:pt-[165px] pb-5 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium !text-white">
+          Best Properties
+        </h2>
+        <p class="text-sm lg:text-lg !text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="mt-5 lg:mt-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+        <div
+          class=" py-5 px-[28px] lg:py-10 lg:px-[55px] lg:col-span-2 lg:row-span-2 rounded-2xl bg-[url('./images/property1.jpg')] bg-cover bg-no-reapet bg-center relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#00000000_0%,#1a1a1a1a_60%,#1a1a1acc_100%)] before:top-0 before:left-0 before:z-10 before:size-full">
+          <div class="flex flex-col">
+            <div class="relative z-11">
+              <button
+                class="rounded-full bg-[#1F4B43] font-medium uppercase text-white text-sm py-2 px-4 cursor-pointer">
+                For Sale
+              </button>
+              <button
+                class="rounded-full bg-[#E7C873] font-medium uppercase text-black text-sm py-2 px-4 ml-2.5 cursor-pointer">
+                Featured
+              </button>
+            </div>
+            <div class="mt-[80px] md:mt-[160px] lg:mt-[474px]  rounded-lg relative z-11">
+              <h4 class="font-medium lg:text-xl !text-white">Villa One Hyde Park</h4>
+              <span class="my-2 block max-lg:text-sm text-white">
+                <img class="inline-block" src="./images/location-white.svg" alt="Location" />
+                2050 Bloomingdale Ave
+              </span>
+              <div class="flex justify-between items-center gap-10 max-md:gap-2 max-md:flex-col max-md:items-start">
+                <span class="lg:text-xl font-semibold text-white">$120,000</span>
+                <div class="flex">
+                  <span class="pr-4 mr-4 border-r-2 border-r-white text-white">
+                    <img class="inline-block mr-2.5 size-5 object-cover" src="./images/Icon (1)-white.svg"
+                      alt="freatured-icon1" />
+                    4
+                  </span>
+                  <span class="pr-4 mr-4 border-r-2 border-r-white text-white">
+                    <img class="inline-block mr-2.5 size-5 object-cover" src="./images/Icon (2)-white.svg"
+                      alt="freatured-icon2" />
+                    2
+                  </span>
+                  <span class="text-white">
+                    <img class="inline-block mr-2.5 size-5 object-cover" src="./images/Icon (3)-white.svg"
+                      alt="freatured-icon3" />
+                    350
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-2  rounded-2xl  relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#00000000_0%,#1a1a1a1a_60%,#1a1a1acc_100%)] before:top-0 before:left-0 before:z-10 before:size-full ">
+          <img class="max-md:h-62.5 size-full rounded-2xl object-cover" src="./images/property2.svg" alt="Image" />
+          <button
+            class="w-[70px] h-[46px] rounded-[50px] text-white backdrop-blur-sm absolute z-11 top-[50%] left-2.5 cursor-pointer">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            class="w-[70px] h-[46px] rounded-[50px] text-white backdrop-blur-sm absolute z-11 top-[50%] right-2.5 cursor-pointer">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <div
+          class="relative before:content-[''] before:absolute before:bg-[linear-gradient(180deg,#00000000_0%,#1a1a1a1a_60%,#1a1a1acc_100%)] before:top-0 before:left-0 before:z-10 before:size-full ">
+          <img class="max-md:h-62.5 size-full object-cover rounded-2xl" src="./images/property3.svg" alt="Image" />
+          <button
+            class="size-[68px] bg-[#1A1A1A1C] absolute z-11 top-[50%] left-[50%] translate-[-50%] flex justify-center items-center cursor-pointer rounded-full">
+            <img src="./images/play.svg" alt="Image">
+          </button>
+        </div>
+        <div class="bg-[#E7C873] rounded-2xl flex-col py-5 px-5 lg:py-[34px] lg:px-10">
+          <h6 class=" text-2xl lg:text-[40px] font-medium">280+</h6>
+          <span class="lg:text-lg">Properties</span>
+          <p class="mt-5 text-sm mb-10 md:mb-60 lg:mb-10">
+            Explore our wide variety of properties to fid your dream home
+            today
+          </p>
+          <div class="text-end">
+            <button
+              class="size-[50px] bg-white rounded-full cursor-pointer hover:bg-black hover:text-white trasition-all duration-500 ease-in-out">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="team" class="bg-white pt-5 md:pt-[60px] lg:pt-[165px] pb-5 md:pb-[60px] lg:pb-[190px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium">
+          Meet Our Team Of Experts
+        </h2>
+        <p class="text-sm lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class=" mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+        <div>
+          <img class="rounded-2xl object-cover max-lg:mx-auto max-lg:w-1/2" src="./images/team1.svg" alt="Team">
+          <div class="mt-5 text-center lg:text-start">
+            <h4 class="text-lg lg:text-xl font-medium mb-1">John Powell</h4>
+            <span class="text-sm">Service Support</span>
+          </div>
+        </div>
+        <div>
+          <img class="rounded-2xl object-cover max-lg:mx-auto max-lg:w-1/2" src="./images/team2.svg" alt="Team">
+          <div class="mt-5 text-center lg:text-start">
+            <h4 class="text-lg lg:text-xl font-medium mb-1">Thomas Powell</h4>
+            <span class="text-sm">Marketing</span>
+          </div>
+        </div>
+        <div>
+          <img class="rounded-2xl object-cover max-lg:mx-auto max-lg:w-1/2" src="./images/team3.svg" alt="Team">
+          <div class="mt-5 text-center lg:text-start">
+            <h4 class="text-lg lg:text-xl font-medium mb-1">Tom Wilson</h4>
+            <span class="text-sm">Designer</span>
+          </div>
+        </div>
+        <div>
+          <img class="rounded-2xl object-cover max-lg:mx-auto max-lg:w-1/2" src="./images/team4.svg" alt="Team">
+          <div class="mt-5 text-center lg:text-start">
+            <h4 class="text-lg lg:text-xl font-medium mb-1">Samuel Palmer</h4>
+            <span class="text-sm">Marketing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white  pb-5 md:pb-[60px] lg:pb-[165px]">
+    <div class="max-w-[87.5rem] mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-medium">
+          Popular Real Estate Markets
+        </h2>
+        <p class="text-sm lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="mt-5 lg:mt-10 flex justify-center items-center flex-wrap   gap-5 max-lg:gap-2.5">
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          The Villages, FL real estate
+        </span>
+
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          New York, Real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Madera, CA real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Fontana, CA real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Moreno Valley, CA real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Aurora, IL real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Perris, CA real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Minnesota Lake, MN real estate
+        </span>
+
+        <span
+          class="max-lg:text-sm border rounded-full px-[26px] py-3 max-lg:px-5 max-lg:py-2.5 cursor-pointer hover:bg-black hover:!text-white trasition-all duration-500 ease-in-out ">
+          Woodbridge, VA real estate
+        </span>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-[#1F4B43] ">
+    <div class="max-w-[106.875rem] w-full mx-auto px-4">
+      <div class="flex max-md:flex-col  justify-between items-center py-2 border-b border-b-[#FFFFFF14]">
+        <div>
+          <img src="./images/logo-white.svg" alt="Logo">
+        </div>
+        <div class="flex items-center gap-5 md:gap-10 lg:gap-[50px] max-md:mt-2.5 ">
+
+          <span class="text-white leading-[18px] text-orientation">FollowUs</span>
+
+          <div class="text-white flex gap-[30px]">
+            <i class=" fa-brands fa-facebook-f"></i>
+            <i class=" fa-brands fa-twitter"></i>
+            <i class=" fa-brands fa-instagram"></i>
+            <i class=" fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
+      </div>
+      <div class="py-5 md:py-[48px] lg:py-[95px] border-b border-b-[#FFFFFF14]">
+        <div class="flex justify-between flex-wrap  max-md:flex-col">
+          <form>
+            <label for="email"
+              class="text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px] inline-block">Subscribe</label>
+            <div class="border-b border-b-[#FFFFFF14] max-w-[370px] w-full flex justify-between max-sm:flex-col pb-3.5">
+              <input id="email" class="placeholder-white text-sm w-full" type="email" name="email"
+                placeholder="Your e-mail">
+              <button
+                class=" max-sm:mt-5 w-[117px] h-[42px] bg-[#FFFFFF14] rounded-full text-white text-sm cursor-pointer">
+                Send
+                <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+              </button>
+            </div>
+            <p class="!text-white text-sm mt-10">Subscribe to our newsletter to receive our weekly feed.</p>
+          </form>
+          <div>
+            <h6 class="!text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px] max-md:mt-2.5 ">Discover</h6>
+            <ul class="text-white text-sm">
+              <li class="mb-2.5">
+                <a href="#">Miami</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">New York</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Chicago</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Florida</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Los Angeles</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">San Diego</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="!text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px]">Quick Links</h6>
+            <ul class="text-white text-sm">
+              <li class="mb-2.5">
+                <a href="#">About</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Contact</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">FAQ's</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Blog</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Pricing Plans</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="#">Terms & Conditions</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="!text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px] ">Contact Us</h6>
+            <ul class="text-white text-sm">
+              <li class="mb-2.5">
+                <a href="mailto:hi@justhome.com">hi@justhome.com</a>
+              </li>
+              <li class="mb-2.5">
+                <a href="tel:+123-456-7890">(123) 456-7890</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="!text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px] ">Our Address</h6>
+            <ul class="text-white text-sm">
+              <li class="mb-2.5">99 Fifth Avenue, 3rd Floor <br>
+                San Francisco, CA 1980</li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="!text-[#FFFFFF78] text-lg font-medium mb-2.5 lg:mb-[30px] ">Get the app</h6>
+            <div
+              class="flex bg-[#FFFFFF12] rounded-xl py-3 pr-[38px] pl-6 mb-2.5 md:mb-5 max-w-[262px] w-full cursor-pointer">
+              <img src="./images/apple.svg" alt="apple-logo">
+              <div class="text-white pl-4 border-l border-l-[#FFFFFF33] ml-3.5">
+                <span class="text-xs block">Download on the</span>
+                <span class="font-medium">Apple Store</span>
+              </div>
+            </div>
+            <div class="flex bg-[#FFFFFF12] rounded-xl py-3 pr-[38px] pl-6 max-w-[262px] w-full cursor-pointer">
+              <img src="./images/playstore.svg" alt="playstore-logo">
+              <div class="text-white pl-4 border-l border-l-[#FFFFFF33] ml-3.5">
+                <span class="text-xs block">Get in on</span>
+                <span class="font-medium">Google Play</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-2.5 md:py-5 lg:py-10">
+      <span class="text-sm text-white">Copyright © 2024. JustHome</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="./jquery/script.js"></script>
+</body>
+
+</html>

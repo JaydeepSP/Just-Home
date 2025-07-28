@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  scrollbar-color: white black;
+  scroll-behavior: smooth;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #1a1a1a;
+}
+
+.scroll-top {
+  animation: scroll-top 0.7s ease-in-out;
+}
+@keyframes scroll-top {
+  from {
+    bottom: -30px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+.scroll-bottom {
+  animation: scroll-bottom 0.7s ease-in-out;
+}
+@keyframes scroll-bottom {
+  from {
+    opacity: 1;
+    bottom: 10px;
+  }
+  to {
+    bottom: -30px;
+    opacity: 0;
+  }
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.sidebar {
+  backdrop-filter: blur(8px);
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -150%;
+  z-index: 50;
+  transition: 0.5s ease-in-out;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+}
+#sidebar-active:checked + div .menu-bar-container {
+  position: fixed;
+  top: 3.5%;
+  right: 5%;
+  z-index: 51;
+}
+
+#sidebar-active:checked ~ .sidebar {
+  right: 0;
+}
+#sidebar-active:checked ~ .overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 49;
+}
+
+.slick-dots {
+  margin: 20px 0 0 0;
+  bottom: initial;
+}
+.slick-dots li button {
+  border: 1px solid transparent;
+  border-radius: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.slick-dots .slick-active button,
+.slick-dots li button:hover,
+.slick-dots li button:focus,
+.slick-dots li button:active {
+  border: 1px solid black;
+}
+
+.testimonial-slider {
+  position: relative;
+}
+.testimonial-slider .slick-prev,
+.testimonial-slider .slick-next {
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: -74px;
+  border: 1px solid black;
+  border-radius: 40px;
+  width: 60px;
+  height: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.testimonial-slider .slick-prev {
+  left: calc(7% - 30px);
+}
+.testimonial-slider .slick-next {
+  left: calc(7% + 55px);
+}
+
+.testimonial-slider .slick-prev::before,
+.testimonial-slider .slick-next::before {
+  color: black;
+  opacity: 1;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+.testimonial-slider .slick-prev::before {
+  content: "\f053";
+}
+
+.testimonial-slider .slick-next::before {
+  content: "\f054";
+}
+
+.testimonial-slider .slick-prev:hover,
+.testimonial-slider .slick-next:hover {
+  background-color: black;
+}
+.testimonial-slider .slick-prev:hover::before,
+.testimonial-slider .slick-next:hover::before {
+  color: #fff8f6;
+}
+
+.text-orientation {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+@media (width<= 767px) {
+  .testimonial-slider .slick-prev,
+  .testimonial-slider .slick-next {
+    transform: translateX(-50%);
+  }
+  .testimonial-slider .slick-prev {
+    left: calc(50% - 40px);
+  }
+  .testimonial-slider .slick-next {
+    left: calc(50% + 40px);
+  }
+  .text-orientation {
+    writing-mode: initial;
+    text-orientation: initial;
+  }
+}
